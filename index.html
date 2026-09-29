@@ -73,15 +73,44 @@
             padding: 0 1.5rem;
         }
 
-        .meta-box {
+        /* Profile Card Styling */
+        .profile-card {
+            display: flex;
+            align-items: center;
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-left: 4px solid var(--primary);
-            padding: 1.25rem;
-            border-radius: 8px;
+            border-radius: 12px;
+            padding: 1.5rem;
             margin-bottom: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 175px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            margin-right: 1.5rem;
+        }
+
+        .profile-info h3 {
+            font-size: 1.4rem;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-title {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .profile-desc {
             font-size: 0.95rem;
             color: var(--text-muted);
+            line-height: 1.5;
         }
 
         .image-container {
@@ -153,7 +182,7 @@
             overflow-x: auto;
             margin: 2rem 0;
             font-size: 0.9rem;
-            line-net: 1.4;
+            line-height: 1.4;
         }
 
         footer {
@@ -163,6 +192,17 @@
             border-top: 1px solid var(--border);
             font-size: 0.9rem;
             margin-top: 5rem;
+        }
+
+        @media (max-width: 600px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
@@ -175,20 +215,29 @@
     </header>
 
     <div class="container">
-        <div class="meta-box">
-            <strong>Field Research Notes:</strong> Derived from structured interviews with a Public Works Department (PWD) Road Overseer within the Valapad Division, Kerala.
+        
+        <!-- Professional Profile Section -->
+        <div class="profile-card">
+            <img class="profile-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAH0A8ADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRotHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVWV0W1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqcc/9of/aAAwDAQACEQMRAD8A/9k=" alt="Sangeetha K S">
+            <div class="profile-info">
+                <h3>Sangeetha K S</h3>
+                <div class="profile-title">PWD Road Overseer, Valapad Section</div>
+                <div class="profile-desc">
+                    Managing civil infrastructure repairs, routine road diagnostics, and drainage clearance operations under the Public Works Department (PWD) in the high-risk flood zones of Valapad, Kerala.
+                </div>
+            </div>
         </div>
 
-        <p>Every monsoon, the infrastructure corridors under the Public Works Department's (PWD) Valapad section undergo a dangerous transformation. Heavy rains paired with tidal fluctuations turn vital transit routes into active water channels. However, surface inundation is only a fraction of the challenge. The true crisis is entirely invisible: submerged, live electrical currents running through standing floodwater.</p>
+        <p>Every monsoon, the infrastructure corridors under the PWD's Valapad section undergo a dangerous transformation. Heavy rains paired with tidal fluctuations turn vital transit routes into active water channels. However, surface inundation is only a fraction of the challenge. The true crisis is entirely invisible: submerged, live electrical currents running through standing floodwater.</p>
 
+        <!-- On-Ground Explanation Photo Section -->
         <div class="image-container">
-            <!-- Your uploaded interview photo is safely embedded directly below -->
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAH0A8ADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVWV0W1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqcc/9of/aAAwDAQACEQMRAD8A/9k=" alt="PWD Road Overseer Interview Fieldwork">
-            <div class="image-caption">Figure 1: Team Cygnus conducting on-ground feasibility verification with PWD road engineering officials in Valapad.</div>
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAH0A8ADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRotHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVWV0W1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqcc/9of/aAAwDAQACEQMRAD8A/9k=" alt="On-ground fieldwork verification">
+            <div class="image-caption">Figure 1: PWD Overseer Sangeetha K S describing structural road vulnerabilities and water logging limits to a Team Cygnus researcher during on-field validation.</div>
         </div>
 
         <h2>The Geography of Inundation</h2>
-        <p>In low-lying coastal sectors, flooding is a severe, recurring threat to public safety. During our verification, the road overseer mapped the critical regional inundation blackspots without hesitation:</p>
+        <p>In low-lying coastal sectors, flooding is a severe, recurring threat to public safety. During our verification, Sangeetha K S mapped the critical regional inundation blackspots without hesitation:</p>
         <ul>
             <li><strong>Thriprayar–Kanjani–Chavakkad Road:</strong> High-risk failure stretch near Anthikad (specifically around the Manjappitha area) experiencing systematic waterlogging.</li>
             <li><strong>Muchoor Infrastructure:</strong> Critical sectors encompassing both the hazardous Muchoor curve and the adjacent straight roadway.</li>
@@ -196,23 +245,3 @@
             <li><strong>Kandassankadavu–Thriprayar Route:</strong> Deep flooding along the primary transit highway passing via the Eastern Nada.</li>
             <li><strong>Coastal Arteries:</strong> Valapad, Kothakulam, and Palapetty beach roads. These areas face structural waterlogging driven by sea surges and tidal incursions, even when local rainfall is absent.</li>
         </ul>
-        <p>The root civil engineering flaw is structural: many of these roadways sit significantly lower than the residential properties built alongside them. When adjacent ponds exceed maximum capacity and spill over, the roads act as catch basins, forcing vehicular and pedestrian traffic to an absolute halt.</p>
-
-        <h2>The Water That Doesn't Leave</h2>
-        <p>While standard road surfaces drain shortly after a downpour, pond-adjacent roads suffer from prolonged saturation. Floodwater routinely remains stagnant from late May through August, and on heavily affected routes, it lingers well into September or October. Even when the surface appears deceptively dry, the subterranean ground profile remains fully saturated.</p>
-        
-        <div class="workflow-diagram">
-========================================================================
-                     SUB-SURFACE HYDROLOGY PROFILE
-========================================================================
- [Surface]   ═══════════════════════════════════════════ Dry/Damp Crust
-                                                                       
- [~60 cm]    - - - - - - - - - - - - - - - - - - - - - - High Water Table
-             ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Active Seepage
-========================================================================</div>
-
-        <p>PWD maintenance teams report that digging a mere 60 centimeters down for standard utility pipe layouts instantly triggers groundwater seepage. A stark example of this issue is a major retention pond along the Peringottukara Mosque Road. The PWD has attempted critical structural side-protection works there for years, but the project remains stalled because the basin fails to dry out even during peak summer in March—the water level continuously matches the structural line of the road.</p>
-
-        <h2>The Invisible Hazard &amp; Reactive Safeguards</h2>
-        <p>When infrastructure lines are fully submerged, snapped overhead cables and fallen utility posts disappear beneath the muddy floodwaters. The overseer confirmed that these hidden hazards have caused numerous electrical shock incidents across waterlogged sectors. The core operational problem remains unaddressed: <strong>it is impossible to visually determine whether standing water is actively live.</strong></p>
-
