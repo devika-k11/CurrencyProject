@@ -1,261 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invisible Currents | Jeeva Jalam Field Research</title>
-    <style>
-        :root {
-            --primary: #0284c7;
-            --primary-dark: #0369a1;
-            --accent: #ea580c;
-            --text-main: #1f2937;
-            --text-muted: #4b5563;
-            --bg-light: #f8fafc;
-            --card-bg: #ffffff;
-            --border: #e2e8f0;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When the Road Floods, Nobody Can See the Current | Team Cygnus</title>
+<meta name="description" content="Field interview with a PWD road overseer in Valapad on flood-prone roads and the hidden risk of electrified water.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f7f8;
+    --ink: #14232b;
+    --muted: #4d6069;
+    --water: #0f4c5c;
+    --spark: #e8a317;
+    --rule: #cfd9dd;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1a20; --ink: #e6eef1; --muted: #9db0b8;
+      --water: #6cc3d5; --spark: #f2b93b; --rule: #2a3d46; --card: #152530;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 1rem; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.125rem; line-height: 1.75;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+  header.masthead { padding: 3rem 0 2rem; border-bottom: 4px solid var(--spark); }
+  .kicker, h2, figcaption, .meta, footer {
+    font-family: "Work Sans", Arial, sans-serif;
+  }
+  .kicker { color: var(--water); font-weight: 700; font-size: .95rem; margin: 0 0 .75rem; }
+  h1 { font-family: "Work Sans", Arial, sans-serif; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: 0 0 1rem; color: var(--water); }
+  .meta { color: var(--muted); font-size: .95rem; margin: 0; }
+  h2 { font-size: 1.5rem; line-height: 1.3; margin: 3rem 0 .75rem; color: var(--water); }
+  p { margin: 0 0 1.1rem; }
+  img { max-width: 100%; height: auto; display: block; }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  .profile { display: flex; gap: 1.5rem; align-items: center; margin: 2.5rem 0 0; }
+  .profile img { width: 9.5rem; height: 9.5rem; object-fit: cover; border-radius: 50%; border: 4px solid var(--card); box-shadow: 0 0 0 2px var(--water); flex: none; }
+  .profile h2 { margin: 0 0 .25rem; font-size: 1.35rem; }
+  .profile p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+  @media (max-width: 30rem) { .profile { flex-direction: column; text-align: center; } }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            padding: 0;
-        }
+  figure { margin: 2.5rem 0 0; }
+  figure img { width: 100%; border-radius: 6px; }
+  figcaption { color: var(--muted); font-size: .9rem; margin-top: .6rem; }
 
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            border-bottom: 4px solid var(--primary);
-        }
+  ul { padding-left: 1.25rem; margin: 0 0 1.1rem; }
+  li { margin-bottom: .45rem; }
+  li::marker { color: var(--spark); }
+  .overflow { overflow-x: auto; }
 
-        .project-badge {
-            background-color: var(--accent);
-            color: white;
-            padding: 0.25rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            max-width: 800px;
-            margin: 0 auto 1rem auto;
-            letter-spacing: -0.02em;
-        }
-
-        header p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Profile Card Styling */
-        .profile-card {
-            display: flex;
-            align-items: center;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .profile-img {
-            width: 130px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid var(--border);
-            margin-right: 1.5rem;
-            display: block;
-        }
-
-        .profile-info h3 {
-            font-size: 1.4rem;
-            color: #0f172a;
-            margin-bottom: 0.25rem;
-        }
-
-        .profile-title {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .profile-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        .image-container {
-            margin: 2.5rem 0;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 0.75rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-        }
-
-        .image-caption {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: 0.75rem;
-            font-style: italic;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            color: #0f172a;
-            margin: 2.5rem 0 1rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border);
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        ul {
-            margin: 0 0 1.5rem 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
-        }
-
-        .highlight-box {
-            background-color: #fff7ed;
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
-
-        .highlight-box p {
-            margin-bottom: 0;
-            font-weight: 600;
-            color: #9a3412;
-        }
-
-        .workflow-diagram {
-            background: #0f172a;
-            color: #38bdf8;
-            font-family: monospace;
-            padding: 1.5rem;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 2rem 0;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-            font-size: 0.9rem;
-            margin-top: 5rem;
-        }
-
-        @media (max-width: 600px) {
-            .profile-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            .profile-img {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-        }
-    </style>
+  blockquote {
+    margin: 1.75rem 0; padding: .25rem 0 .25rem 1.25rem;
+    border-left: 4px solid var(--spark); font-style: italic; color: var(--ink);
+  }
+  .callout { background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--water); padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  footer { margin-top: 4rem; padding: 1.5rem 0 3rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+  a { color: var(--water); }
+  a:focus-visible { outline: 3px solid var(--spark); outline-offset: 2px; }
+</style>
 </head>
 <body>
+<div class="wrap">
 
-    <header>
-        <span class="project-badge">SIH 2026 | Team Cygnus</span>
-        <h1>Invisible Currents: Rethinking Electrical Safety in Monsoon Flood Zones</h1>
-        <p>Primary field validation and workflow analysis for the "Jeeva Jalam" decentralized warning mesh.</p>
-    </header>
+  <header class="masthead">
+    <p class="kicker">Smart India Hackathon 2026 &middot; Team Cygnus</p>
+    <h1>When the Road Floods, Nobody Can See the Current</h1>
+    <p class="meta">Field interview with a PWD road overseer, Valapad section, Thrissur</p>
+  </header>
 
-    <div class="container">
-        
-        <!-- Professional Profile Section -->
-        <div class="profile-card">
-            <img class="profile-img" src="profile.png" alt="Sangeetha K S">
-            <div class="profile-info">
-                <h3>Sangeetha K S</h3>
-                <div class="profile-title">PWD Road Overseer, Valapad Section</div>
-    
-            </div>
-        </div>
+  <!-- 1. Interviewee profile -->
+  <section class="profile" aria-label="About the interviewee">
+    <img src="profile.png" alt="Portrait of Sangeetha K S, PWD Overseer, Valapad Section">
+    <div>
+      <h2>Sangeetha K S</h2>
+      <p>Overseer, Public Works Department (Roads), Valapad Section. She supervises road maintenance and works, and is among the first officials to respond when roads under her section flood during the monsoon.</p>
+    </div>
+  </section>
 
-        <p>Every monsoon, the infrastructure corridors under the PWD's Valapad section undergo a dangerous transformation. Heavy rains paired with tidal fluctuations turn vital transit routes into active water channels. However, surface inundation is only a fraction of the challenge. The true crisis is entirely invisible: submerged, live electrical currents running through standing floodwater.</p>
+  <!-- 2. Interview evidence -->
+  <figure>
+    <img src="interview.jpg" alt="Sangeetha K S, PWD Overseer, speaking with a Team Cygnus member during the interview">
+    <figcaption>Sangeetha K S, PWD Overseer (Roads), Valapad Section, speaking with a member of Team Cygnus during the interview, [date].</figcaption>
+  </figure>
 
-        <!-- On-Ground Explanation Photo Section -->
-        <div class="image-container">
-            <img src="interview.jpg" alt="On-ground fieldwork verification">
-            <div class="image-caption">Figure 1: PWD Overseer Sangeetha K S describing structural road vulnerabilities and water logging limits to a Team Cygnus researcher during on-field validation.</div>
-        </div>
+  <!-- 3. Blog -->
+  <main>
+    <h2>Introduction</h2>
+    <p>Every monsoon, several roads under the Valapad section of the Public Works Department become water channels. Floodwater is only part of the danger. Sometimes the water is also electrically live. To understand how the problem is handled on the ground, our team interviewed the section's road overseer. This article records what she told us.</p>
 
-        <h2>The Geography of Inundation</h2>
-        <p>In low-lying coastal sectors, flooding is a severe, recurring threat to public safety. During our verification, Sangeetha K S mapped the critical regional inundation blackspots without hesitation:</p>
-        <ul>
-            <li><strong>Thriprayar–Kanjani–Chavakkad Road:</strong> High-risk failure stretch near Anthikad (specifically around the Manjappitha area) experiencing systematic waterlogging.</li>
-            <li><strong>Muchoor Infrastructure:</strong> Critical sectors encompassing both the hazardous Muchoor curve and the adjacent straight roadway.</li>
-            <li><strong>Peringottukara Network:</strong> Complete systemic inundation concentrated along the Mosque and Post Office transit links.</li>
-            <li><strong>Kandassankadavu–Thriprayar Route:</strong> Deep flooding along the primary transit highway passing via the Eastern Nada.</li>
-            <li><strong>Coastal Arteries:</strong> Valapad, Kothakulam, and Palapetty beach roads. These areas face structural waterlogging driven by sea surges and tidal incursions, even when local rainfall is absent.</li>
-        </ul>
-        <p>The root civil engineering flaw is structural: many of these roadways sit significantly lower than the residential properties built alongside them. When adjacent ponds exceed maximum capacity and spill over, the roads act as catch basins, forcing vehicular and pedestrian traffic to an absolute halt.</p>
+    <h2>Where the flooding occurs</h2>
+    <p>The overseer identified the following locations without hesitation:</p>
+    <div class="overflow">
+    <ul>
+      <li><strong>Thriprayar&ndash;Kanjani&ndash;Chavakkad road:</strong> a stretch near Anthikad that floods badly.</li>
+      <li><strong>Muchoor:</strong> both the curve and the straight road.</li>
+      <li><strong>Peringottukara:</strong> the mosque road and the post office road.</li>
+      <li><strong>Kandassankadavu&ndash;Thriprayar road:</strong> including the route via the eastern nada.</li>
+      <li><strong>Beach roads:</strong> Valapad, Kothakulam and Palapetty, where sea surges push water onto the roadside even without rain.</li>
+    </ul>
+    </div>
+    <p>Many of these roads sit lower than the houses beside them. Ponds on both sides fill up and spill onto the carriageway, and traffic stops.</p>
 
-        <h2>The Water That Doesn't Leave</h2>
-        <p>While standard road surfaces drain shortly after a downpour, pond-adjacent roads suffer from prolonged saturation. Floodwater routinely remains stagnant from late May through August, and on heavily affected routes, it lingers well into September or October. Even when the surface appears deceptively dry, the subterranean ground profile remains fully saturated.</p>
-        
-        <div class="workflow-diagram">
-========================================================================
-                     SUB-SURFACE HYDROLOGY PROFILE
-========================================================================
- [Surface]   ═══════════════════════════════════════════ Dry/Damp Crust
-                                                                       
- [~60 cm]    - - - - - - - - - - - - - - - - - - - - - - High Water Table
-             ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Active Seepage
-========================================================================</div>
+    <h2>Water that does not leave</h2>
+    <p>Some roads drain quickly. The pond-side roads do not. Water typically stays from late May through August, and on some roads until September or October.</p>
+    <p>Even when the surface looks dry, the ground is not. When workers dig about 60 cm down to lay a pipe, groundwater seeps up. Side-protection work on ponds is best attempted between January and March, but one pond on the Peringottukara mosque road has resisted such work for years. It does not dry out even by March, and its water level stays at road level.</p>
 
+    <h2>The hazard that cannot be seen</h2>
+    <p>According to the overseer, fallen electric posts and snapped cables hidden under floodwater have caused many shock incidents in flooded areas. The central problem is that a person cannot tell by looking whether the water is live.</p>
+    <p>Today the response depends on people noticing. Someone feels a shock or sees a broken cable and reports it. KSEB then switches off the supply completely, and PWD helps secure the spot. Traffic resumes only after the area has been checked. Sometimes that check finds no shock at all, so the shutdown was a precaution. The process works, but only after someone has already been exposed or frightened.</p>
+
+    <h2>Who is responsible?</h2>
+    <p>Her answer was direct: KSEB. She said it must stay vigilant in every season, whether or not current is flowing, and should supervise all roads regularly, because a child walking through water cannot know that a cable has snapped.</p>
+    <blockquote>For her, this is a matter of the value of a life.</blockquote>
+
+    <h2>Her response to our idea</h2>
+    <p>We described our proposed solution, <strong>Jeeva Jalam</strong>: small devices fixed at ground level on walls in flood-prone spots, roughly 50 metres apart. The devices detect electric leakage in the water, verify it with neighbouring devices, and send an alert message to the people concerned.</p>
+    <p>She called it a genuinely useful idea. Because no one can see the danger at a glance today, an early warning that makes it visible would be a real help.</p>
+
+    <h2>Conclusion</h2>
+    <div class="callout">
+      <p style="margin:0">The problem is real, it recurs every year, and officials currently deal with it reactively. The gap is an early, automatic warning at known blackspots. That is the gap Jeeva Jalam is designed to close.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Team Cygnus &middot; Smart India Hackathon 2026 &middot; Theme: Disaster Management and Resilience</p>
+    <p>Interview conducted with the consent of the interviewee.</p>
+  </footer>
+</div>
+</body>
+</html>
