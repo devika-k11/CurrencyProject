@@ -3,69 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>When the Road Floods, Nobody Can See the Current | Team Cygnus</title>
-<meta name="description" content="Field interview with a PWD road overseer in Valapad on flood-prone roads and the hidden risk of electrified water.">
+<title>Electrified Floodwater on Roads: A Field Interview with the PWD Valapad Section | Team Cygnus</title>
+<meta name="description" content="A field interview with the PWD Road Overseer, Valapad Section, on flood-prone roads and the hidden risk of electrified floodwater.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #f5f7f8;
-    --ink: #14232b;
-    --muted: #4d6069;
-    --water: #0f4c5c;
-    --spark: #e8a317;
-    --rule: #cfd9dd;
-    --card: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0e1a20; --ink: #e6eef1; --muted: #9db0b8;
-      --water: #6cc3d5; --spark: #f2b93b; --rule: #2a3d46; --card: #152530;
-    }
-  }
+  :root { --bg:#ffffff; --ink:#1a1f24; --muted:#5b6670; --navy:#12324a; --rule:#dde2e6; --tint:#f4f6f8; }
   * { box-sizing: border-box; }
-  html { scroll-padding-top: 1rem; }
-  body {
-    margin: 0; background: var(--bg); color: var(--ink);
-    font-family: "Source Serif 4", Georgia, serif;
-    font-size: 1.125rem; line-height: 1.75;
-  }
-  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
-  header.masthead { padding: 3rem 0 2rem; border-bottom: 4px solid var(--spark); }
-  .kicker, h2, figcaption, .meta, footer {
-    font-family: "Work Sans", Arial, sans-serif;
-  }
-  .kicker { color: var(--water); font-weight: 700; font-size: .95rem; margin: 0 0 .75rem; }
-  h1 { font-family: "Work Sans", Arial, sans-serif; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: 0 0 1rem; color: var(--water); }
-  .meta { color: var(--muted); font-size: .95rem; margin: 0; }
-  h2 { font-size: 1.5rem; line-height: 1.3; margin: 3rem 0 .75rem; color: var(--water); }
-  p { margin: 0 0 1.1rem; }
-  img { max-width: 100%; height: auto; display: block; }
-
-  .profile { display: flex; gap: 1.5rem; align-items: center; margin: 2.5rem 0 0; }
-  .profile img { width: 9.5rem; height: 9.5rem; object-fit: cover; border-radius: 50%; border: 4px solid var(--card); box-shadow: 0 0 0 2px var(--water); flex: none; }
-  .profile h2 { margin: 0 0 .25rem; font-size: 1.35rem; }
-  .profile p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
-  @media (max-width: 30rem) { .profile { flex-direction: column; text-align: center; } }
-
-  figure { margin: 2.5rem 0 0; }
-  figure img { width: 100%; border-radius: 6px; }
-  figcaption { color: var(--muted); font-size: .9rem; margin-top: .6rem; }
-
-  ul { padding-left: 1.25rem; margin: 0 0 1.1rem; }
-  li { margin-bottom: .45rem; }
-  li::marker { color: var(--spark); }
-  .overflow { overflow-x: auto; }
-
-  blockquote {
-    margin: 1.75rem 0; padding: .25rem 0 .25rem 1.25rem;
-    border-left: 4px solid var(--spark); font-style: italic; color: var(--ink);
-  }
-  .callout { background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--water); padding: 1rem 1.25rem; margin: 1.5rem 0; }
-  footer { margin-top: 4rem; padding: 1.5rem 0 3rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
-  a { color: var(--water); }
-  a:focus-visible { outline: 3px solid var(--spark); outline-offset: 2px; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Source Serif 4", Georgia, serif; font-size:1.125rem; line-height:1.8; }
+  .wrap { max-width:43rem; margin:0 auto; padding:0 1.25rem; }
+  .sans, h1, h2, figcaption, .meta, footer { font-family:"Work Sans", Arial, sans-serif; }
+  header.masthead { padding:3.5rem 0 1.75rem; border-bottom:1px solid var(--rule); }
+  .kicker { color:var(--muted); font-weight:500; font-size:.95rem; margin:0 0 .9rem; }
+  h1 { font-size:clamp(1.8rem,5.5vw,2.6rem); line-height:1.2; margin:0 0 1rem; color:var(--navy); }
+  .meta { color:var(--muted); font-size:.95rem; margin:0; }
+  h2 { font-size:1.35rem; line-height:1.3; margin:2.75rem 0 .75rem; color:var(--navy); }
+  p { margin:0 0 1.15rem; text-align:left; }
+  img { max-width:100%; height:auto; display:block; }
+  .profile { display:flex; gap:1.5rem; align-items:center; margin:2.25rem 0 0; padding-bottom:2rem; border-bottom:1px solid var(--rule); }
+  .profile img { width:9rem; height:9rem; object-fit:cover; border-radius:50%; border:1px solid var(--rule); flex:none; }
+  .profile h2 { margin:0 0 .15rem; font-size:1.3rem; }
+  .profile .role { font-family:"Work Sans", Arial, sans-serif; font-weight:500; color:var(--muted); font-size:.95rem; margin:0 0 .5rem; }
+  .profile p:last-child { margin:0; font-size:1rem; line-height:1.65; }
+  @media (max-width:30rem) { .profile { flex-direction:column; text-align:center; } }
+  figure { margin:2.25rem 0 0; }
+  figure img { width:100%; border:1px solid var(--rule); }
+  figcaption { color:var(--muted); font-size:.88rem; margin-top:.6rem; line-height:1.5; }
+  ul { padding-left:1.25rem; margin:0 0 1.15rem; }
+  li { margin-bottom:.5rem; }
+  blockquote { margin:1.75rem 0; padding:.2rem 0 .2rem 1.25rem; border-left:3px solid var(--navy); color:var(--ink); font-style:italic; }
+  .summary { background:var(--tint); border-left:3px solid var(--navy); padding:1rem 1.25rem; margin:1.5rem 0; }
+  .summary p { margin:0; }
+  footer { margin-top:3.5rem; padding:1.5rem 0 3rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.88rem; line-height:1.6; }
+  footer p { margin:0 0 .6rem; }
 </style>
 </head>
 <body>
@@ -73,68 +44,64 @@
 
   <header class="masthead">
     <p class="kicker">Smart India Hackathon 2026 &middot; Team Cygnus</p>
-    <h1>When the Road Floods, Nobody Can See the Current</h1>
-    <p class="meta">Field interview with a PWD road overseer, Valapad section, Thrissur</p>
+    <h1>Electrified Floodwater on Roads: A Field Interview with the PWD Valapad Section</h1>
+    <p class="meta">Theme: Disaster Management and Resilience &middot; Project: Jeeva Jalam</p>
   </header>
 
-  <!-- 1. Interviewee profile -->
   <section class="profile" aria-label="About the interviewee">
     <img src="profile.png" alt="Portrait of Sangeetha K S, PWD Overseer, Valapad Section">
     <div>
       <h2>Sangeetha K S</h2>
-      <p>Overseer, Public Works Department (Roads), Valapad Section. She supervises road maintenance and works, and is among the first officials to respond when roads under her section flood during the monsoon.</p>
+      <p class="role">Overseer (Roads), Public Works Department, Valapad Section</p>
+      <p>Ms. Sangeetha supervises the maintenance and execution of road works within the Valapad section.</p>
     </div>
   </section>
 
-  <!-- 2. Interview evidence -->
   <figure>
     <img src="interview.jpg" alt="Sangeetha K S, PWD Overseer, speaking with a Team Cygnus member during the interview">
-    <figcaption>Sangeetha K S, PWD Overseer (Roads), Valapad Section, speaking with a member of Team Cygnus during the interview, [date].</figcaption>
+    <figcaption>Ms. Sangeetha K S, PWD Overseer (Roads), Valapad Section, in conversation with a member of Team Cygnus during the field interview, [date].</figcaption>
   </figure>
 
-  <!-- 3. Blog -->
   <main>
     <h2>Introduction</h2>
-    <p>Every monsoon, several roads under the Valapad section of the Public Works Department become water channels. Floodwater is only part of the danger. Sometimes the water is also electrically live. To understand how the problem is handled on the ground, our team interviewed the section's road overseer. This article records what she told us.</p>
+    <p>Each monsoon, several roads within the Valapad section of the Public Works Department (PWD) become waterlogged. Flooding alone is a serious disruption, but it is not the only hazard. Where electric posts have fallen or cables have snapped, floodwater may also carry live current. To understand how this risk is managed at present, Team Cygnus interviewed the section's Road Overseer. This article documents her observations.</p>
 
-    <h2>Where the flooding occurs</h2>
-    <p>The overseer identified the following locations without hesitation:</p>
-    <div class="overflow">
+    <h2>Flood-prone locations</h2>
+    <p>The Overseer identified the following locations as recurrently affected:</p>
     <ul>
-      <li><strong>Thriprayar&ndash;Kanjani&ndash;Chavakkad road:</strong> a stretch near Anthikad that floods badly.</li>
-      <li><strong>Muchoor:</strong> both the curve and the straight road.</li>
+      <li><strong>Thriprayar&ndash;Kanjani&ndash;Chavakkad road:</strong> a stretch near Anthikad that experiences severe flooding.</li>
+      <li><strong>Muchoor:</strong> both the curved section and the straight road.</li>
       <li><strong>Peringottukara:</strong> the mosque road and the post office road.</li>
       <li><strong>Kandassankadavu&ndash;Thriprayar road:</strong> including the route via the eastern nada.</li>
-      <li><strong>Beach roads:</strong> Valapad, Kothakulam and Palapetty, where sea surges push water onto the roadside even without rain.</li>
+      <li><strong>Beach roads:</strong> Valapad, Kothakulam and Palapetty, where sea surges push water onto the roadside even in the absence of rain.</li>
     </ul>
-    </div>
-    <p>Many of these roads sit lower than the houses beside them. Ponds on both sides fill up and spill onto the carriageway, and traffic stops.</p>
+    <p>Many of these roads lie at a lower level than the adjoining houses. Ponds on either side of the road fill to capacity and overflow onto the carriageway, which halts traffic.</p>
 
-    <h2>Water that does not leave</h2>
-    <p>Some roads drain quickly. The pond-side roads do not. Water typically stays from late May through August, and on some roads until September or October.</p>
-    <p>Even when the surface looks dry, the ground is not. When workers dig about 60 cm down to lay a pipe, groundwater seeps up. Side-protection work on ponds is best attempted between January and March, but one pond on the Peringottukara mosque road has resisted such work for years. It does not dry out even by March, and its water level stays at road level.</p>
+    <h2>Persistence of standing water</h2>
+    <p>Some roads drain within a short time. Roads adjoining ponds do not. On these roads, water generally remains from late May through August, and in certain cases until September or October.</p>
+    <p>The ground remains saturated even when the surface appears dry. During excavation for pipe laying, groundwater has been observed to seep in at a depth of approximately 60 cm. The period from January to March is the most suitable for constructing pond side-protection. However, one pond on the Peringottukara mosque road has not permitted such work for several years, as it does not dry out even by March and its water level remains at the level of the road.</p>
 
-    <h2>The hazard that cannot be seen</h2>
-    <p>According to the overseer, fallen electric posts and snapped cables hidden under floodwater have caused many shock incidents in flooded areas. The central problem is that a person cannot tell by looking whether the water is live.</p>
-    <p>Today the response depends on people noticing. Someone feels a shock or sees a broken cable and reports it. KSEB then switches off the supply completely, and PWD helps secure the spot. Traffic resumes only after the area has been checked. Sometimes that check finds no shock at all, so the shutdown was a precaution. The process works, but only after someone has already been exposed or frightened.</p>
+    <h2>The concealed electrical hazard</h2>
+    <p>According to the Overseer, fallen electric posts and broken cables submerged in floodwater have led to a number of electric shock incidents in flooded areas. The central difficulty is that the presence of live current cannot be determined by visual inspection.</p>
+    <p>The existing response is reactive. A person experiences a shock or notices a broken cable and reports it. The Kerala State Electricity Board (KSEB) then disconnects the supply completely, and the PWD assists in securing the location. Traffic is restored only after the area has been inspected. In some instances the inspection finds no live current, which means the shutdown was precautionary. The procedure is effective, but it begins only after someone has been exposed to the risk.</p>
 
-    <h2>Who is responsible?</h2>
-    <p>Her answer was direct: KSEB. She said it must stay vigilant in every season, whether or not current is flowing, and should supervise all roads regularly, because a child walking through water cannot know that a cable has snapped.</p>
-    <blockquote>For her, this is a matter of the value of a life.</blockquote>
+    <h2>Roles in ensuring electrical safety</h2>
+    <p>Asked about electrical safety during floods, the Overseer explained that electrical installations fall within the domain of the Kerala State Electricity Board (KSEB), while the PWD supports the response by securing affected locations and coordinating with the Board. She emphasised that continuous vigilance is essential in every season, since a fallen or broken cable may not be noticeable to passers-by, particularly children.</p>
+    <blockquote>She stressed that public safety is paramount, as the matter concerns human life.</blockquote>
 
-    <h2>Her response to our idea</h2>
-    <p>We described our proposed solution, <strong>Jeeva Jalam</strong>: small devices fixed at ground level on walls in flood-prone spots, roughly 50 metres apart. The devices detect electric leakage in the water, verify it with neighbouring devices, and send an alert message to the people concerned.</p>
-    <p>She called it a genuinely useful idea. Because no one can see the danger at a glance today, an early warning that makes it visible would be a real help.</p>
+    <h2>Response to the proposed solution</h2>
+    <p>The team presented <strong>Jeeva Jalam</strong>, a network of compact devices fixed at ground level on walls in flood-prone locations at intervals of approximately 50 metres. The devices detect electrical leakage in the water, verify the reading with neighbouring devices, and send an alert to the concerned persons.</p>
+    <p>The Overseer described the concept as highly useful. Since the danger cannot be identified at a glance today, an automatic warning that makes it visible would be a significant benefit to the public.</p>
 
     <h2>Conclusion</h2>
-    <div class="callout">
-      <p style="margin:0">The problem is real, it recurs every year, and officials currently deal with it reactively. The gap is an early, automatic warning at known blackspots. That is the gap Jeeva Jalam is designed to close.</p>
+    <div class="summary">
+      <p>The interview confirmed that electrified floodwater is a genuine and recurring problem, and that authorities presently respond only after an incident or report. What is lacking is an early, automatic warning at known blackspots. Jeeva Jalam has been designed to address this gap.</p>
     </div>
   </main>
 
   <footer>
-    <p>Team Cygnus &middot; Smart India Hackathon 2026 &middot; Theme: Disaster Management and Resilience</p>
-    <p>Interview conducted with the consent of the interviewee.</p>
+    <p>Team Cygnus &middot; Smart India Hackathon 2026</p>
+    <p>Views expressed by the interviewee are her own and do not represent the official position of the Public Works Department.</p>
   </footer>
 </div>
 </body>
